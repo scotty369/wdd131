@@ -1,80 +1,117 @@
 /* Basic styling */
 body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  header {
-    background-color: #02475e;
-    color: #fff;
-    padding: 1em;
-    text-align: center;
-  }
-  
-  header h1 span {
-    color: #ffcc00;
-  }
-  
-  nav {
-    display: flex;
-    justify-content: center;
-    gap: 1em;
-    background-color: #333;
-    padding: 0.5em 0;
-  }
-  
-  nav a {
-    color: #fff;
-    text-decoration: none;
-    padding: 0.5em 1em;
-    transition: background-color 0.3s;
-  }
-  
-  nav a:hover {
-    background-color: #555;
-    border-radius: 5px;
-  }
-  
-  main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2em;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1em;
-  }
-  
-  .card {
-    background-color: #f9f9f9;
-    padding: 1.5em;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .card h2 {
-    color: #02475e;
-    font-weight: 700;
-  }
-  
-  .card h3 {
-    text-align: center;
-    font-weight: 700;
-    color: #555;
-  }
-  
-  .profile-image {
-    width: 100px;
-    float: right;
-    margin: 1em;
-    border-radius: 50%;
-    border: 2px solid #ccc;
-  }
-  
-  footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1em;
-  }
-  
+  font-family: 'Roboto', sans-serif; /* Google font */
+  margin: 0;
+  padding: 0;
+  background-color: #f0f4f8;
+}
+
+/* Header styling */
+header {
+  background-color: #003366;
+  color: #fff;
+  padding: 1em;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header h1 span {
+  color: #ffd700; /* gold color */
+}
+
+/* Navigation bar (tabs) */
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #333;
+  padding: 0.5em 0;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5em 1em;
+  transition: background-color 0.3s;
+  margin: 0 5px;
+}
+
+nav a:hover {
+  background-color: #555;
+  border-radius: 5px;
+}
+
+/* Main layout */
+main {
+  max-width: 1200px;
+  margin: 2em auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2em;
+  padding: 0 1em;
+}
+
+/* Card styling */
+.card {
+  background-color: #e0ebf5; /* light blue background */
+  padding: 1.5em;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-top: 4px solid #003366; /* dark blue bar at the top */
+}
+
+.card h2 {
+  color: #003366;
+  font-weight: 700;
+  border-bottom: 2px solid #003366;
+  padding-bottom: 0.5em;
+}
+
+.card h3 {
+  color: #333;
+  text-align: center;
+  font-weight: 700;
+}
+
+.profile-image {
+  width: 200px;
+  float: right;
+  margin: 1em;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+}
+
+/* List styling */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 0.5em;
+}
+
+ul li a {
+  color: #003366;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Footer styling */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1em;
+  font-size: 0.9em;
+}
+
+footer p {
+  margin: 0;
+}
