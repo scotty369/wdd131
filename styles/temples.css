@@ -1,0 +1,90 @@
+/* temples.css - Mobile view */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #31124a;
+    color: white;
+    padding: 1rem;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header nav ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    justify-content: flex-end; /* Aligns the navigation to the right */
+    text-align: right; /* Ensures the items align to the right */
+}
+
+header nav ul li {
+    list-style: none;
+    margin: 0.5rem 0; /* Space between links */
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    margin-left: 1rem; /* Adds space between each word */
+}
+
+main {
+    width: 90%;
+    margin: 0 auto;
+}
+
+main h2 {
+    text-align: center; /* Center the "Home" heading */
+}
+
+main .temples {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Add to temples.css */
+.hamburger {
+    display: block;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+header nav ul {
+    display: none;
+    list-style: none;
+}
+
+header nav ul.visible {
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .hamburger {
+        display: none;
+    }
+
+    header nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end; /* Align to the right */
+        gap: 1rem; /* Space between each link */
+    }
+}
