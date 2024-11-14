@@ -1,25 +1,35 @@
 /* Basic styling */
 body {
-  font-family: 'Roboto', sans-serif; /* Google font */
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f0f4f8;
+  line-height: 1.6;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /* Header styling */
 header {
   background-color: #003366;
   color: #fff;
-  padding: 1em;
-  text-align: center;
+  padding: 1.5em;
+  text-align: left;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
 }
 
 header h1 {
   margin: 0;
+  font-size: 2.8em;
+  letter-spacing: 1px;
 }
 
 header h1 span {
-  color: #ffd700; /* gold color */
+  color: #ffd700; /* Gold color */
+  font-style: italic;
 }
 
 /* Navigation bar (tabs) */
@@ -27,60 +37,104 @@ nav {
   display: flex;
   justify-content: center;
   background-color: #333;
-  padding: 0.5em 0;
+  padding: 0.7em 0;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 nav a {
   color: #fff;
   text-decoration: none;
-  padding: 0.5em 1em;
-  transition: background-color 0.3s;
-  margin: 0 5px;
+  padding: 0.7em 1.2em;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 0 7px;
+  border-radius: 5px;
 }
 
 nav a:hover {
   background-color: #555;
-  border-radius: 5px;
+  transform: scale(1.08);
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15);
 }
 
 /* Main layout */
 main {
   max-width: 1200px;
-  margin: 2em auto;
+  margin: 2.5em auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2em;
-  padding: 0 1em;
+  gap: 2.5em;
+  padding: 0 1.5em;
+  transition: padding 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr; /* Stack columns on smaller screens */
+    padding: 0 1em;
+  }
 }
 
 /* Card styling */
 .card {
-  background-color: #e0ebf5; /* light blue background */
-  padding: 1.5em;
-  border-radius: 8px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  border-top: 4px solid #003366; /* dark blue bar at the top */
+  background-color: #e0ebf5; /* Light blue background */
+  padding: 2em;
+  border-radius: 12px;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+  border-top: 5px solid #003366; /* Dark blue bar at the top */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px); /* Card lift effect */
+  box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
 }
 
 .card h2 {
   color: #003366;
   font-weight: 700;
-  border-bottom: 2px solid #003366;
-  padding-bottom: 0.5em;
+  border-bottom: 3px solid #003366;
+  padding-bottom: 0.6em;
+  font-size: 1.8em;
 }
 
 .card h3 {
   color: #333;
   text-align: center;
   font-weight: 700;
+  margin-bottom: 1.5em;
 }
 
+/* Profile image styling */
 .profile-image {
-  width: 200px;
-  float: right;
-  margin: 1em;
+  width: 150px; /* Set the size of the profile image */
+  float: left;
+  margin-right: 1.5em;
+  margin-bottom: 1em;
+  display: right;
   border-radius: 50%;
-  border: 2px solid #ccc;
+  border: 4px solid #ffd700; /* Golden border */
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.profile-image:hover {
+  transform: scale(1.1); /* Zoom effect */
+  border-color: #003366; /* Dark blue border on hover */
+}
+
+/* California image styling */
+.california-image {
+  width: 150px; /* Adjust size to fit alongside description */
+  float: left;
+  margin-right: 1.5em;
+  margin-bottom: 1em;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.california-image:hover {
+  transform: scale(1.05); /* Zoom effect */
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
 }
 
 /* List styling */
@@ -90,17 +144,21 @@ ul {
 }
 
 ul li {
-  margin-bottom: 0.5em;
+  margin-bottom: 0.8em;
+  font-size: 1.15em;
 }
 
 ul li a {
   color: #003366;
   text-decoration: none;
   font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 ul li a:hover {
+  color: #ffd700; /* Gold color on hover */
   text-decoration: underline;
+  transform: translateX(5px); /* Slight shift on hover */
 }
 
 /* Footer styling */
@@ -108,10 +166,23 @@ footer {
   background-color: #333;
   color: #fff;
   text-align: center;
-  padding: 1em;
-  font-size: 0.9em;
+  padding: 2em 1em;
+  font-size: 1.1em;
+  box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: auto; /* Ensures footer sticks to bottom */
 }
 
 footer p {
   margin: 0;
+}
+
+footer p a {
+  color: #ffd700;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer p a:hover {
+  color: #003366; /* Dark blue color on hover */
+  text-decoration: underline;
 }

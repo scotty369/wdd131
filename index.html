@@ -8,8 +8,10 @@
   <meta name="author" content="Scott Townsend">
   <link rel="stylesheet" href="styles/base.css">
   <!-- Import Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <script src="getdates.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
 
@@ -28,10 +30,15 @@
   <main>
     <section class="about-me card">
       <h2>About Me</h2>
-      <p>My name is Scott, and I'm from California, USA. I am a data science student passionate about exploring web development and creating interactive web applications. I enjoy coding, learning new skills, and connecting with others in the field.</p>
-      <img src="images/Profile.jpeg" alt="Scott Townsend" class="profile-image">
+      <div class="about-me-content">
+        <p>My name is Scott, and I'm from California, USA. I am a data science student passionate about exploring web development and creating interactive web applications. I enjoy coding, learning new skills, and connecting with others in the field.</p>
+        <img src="images/Profile.jpeg" alt="Scott Townsend" class="profile-image">
+      </div>
       <h3>California, USA</h3>
-      <p>California is known for its diverse landscapes, from beaches to mountains, and its vibrant tech industry. It’s a place where innovation thrives, making it a perfect location to pursue a career in data science and web development.</p>
+      <div class="california-content">
+        <img src="images/cali.jpg" alt="California" class="california-image">
+        <p>California is known for its diverse landscapes, from beaches to mountains, and its vibrant tech industry. It’s a place where innovation thrives, making it a perfect location to pursue a career in data science and web development.</p>
+      </div>
     </section>
 
     <section class="web-dev-resources card">
