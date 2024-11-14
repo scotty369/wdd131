@@ -105,7 +105,7 @@ main {
 }
 
 /* Profile image styling */
-.profile-image:hover {
+.profile-image {
   width: 150px; /* Set the size of the profile image */
   float: left;
   margin-right: 1.5em;
@@ -116,7 +116,7 @@ main {
   transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
-.profile-image:hover {
+.profile-image {
   transform: scale(1.1); /* Zoom effect */
   border-color: #003366; /* Dark blue border on hover */
 }
