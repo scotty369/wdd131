@@ -35,6 +35,11 @@ header nav ul li a {
     margin-left: 1rem; /* Adds space between each word */
 }
 
+header nav ul li a:hover {
+    color: #f0a500; /* Hover effect */
+    text-decoration: underline;
+}
+
 main {
     width: 90%;
     margin: 0 auto;
@@ -68,12 +73,11 @@ footer {
 }
 
 header nav ul {
-    display: none;
-    list-style: none;
+    display: none; /* Hide navigation by default */
 }
 
 header nav ul.visible {
-    display: block;
+    display: block; /* Show navigation when the hamburger is clicked */
 }
 
 @media (min-width: 768px) {
