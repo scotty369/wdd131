@@ -1,13 +1,18 @@
 /* Global Styles */
+:root {
+    --primary-color: #b22222;
+    --secondary-color: #228b22;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
     margin: 0;
     padding: 0;
     color: #333;
 }
 
 header {
-    background-color: #b22222; /* Red */
+    background-color: var(--primary-color);
     color: white;
     text-align: center;
     padding: 1rem;
@@ -40,10 +45,15 @@ main {
 }
 
 .data h2, .weather h2 {
-    background-color: #228b22; /* Green */
+    background-color: var(--secondary-color);
     color: white;
     padding: 0.5rem;
     border-radius: 5px;
+}
+
+h2::after {
+    content: " ☀️";
+    margin-left: 5px;
 }
 
 ul {
@@ -57,7 +67,17 @@ ul li {
 
 footer {
     text-align: center;
-    background-color: #b22222;
+    background-color: var(--primary-color);
     color: white;
     padding: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+    .info {
+        flex-direction: column;
+    }
 }
