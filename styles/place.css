@@ -81,3 +81,11 @@ footer {
         flex-direction: column;
     }
 }
+
+footer svg {
+    margin-left: 10px; /* Space between text and SVG */
+    vertical-align: middle; /* Align it with text */
+    width: 24px;
+    height: 24px;
+    fill: #b22222; /* Set the color */
+}
