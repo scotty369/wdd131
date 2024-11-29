@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Album - A Collection of Temples Worldwide</title>
+    <meta name="description" content="A collection of beautiful temples from around the world. View images and learn more about each temple.">
+    <meta name="author" content="Scott Townsend">
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <script defer src="scripts/filtered-temples.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Temple Album</h1>
+        <nav>
+            <button class="hamburger" aria-label="Toggle menu">&#9776;</button>
+            <ul>
+                <li><a href="#" id="filter-home">Home</a></li>
+                <li><a href="#" id="filter-old">Old</a></li>
+                <li><a href="#" id="filter-new">New</a></li>
+                <li><a href="#" id="filter-large">Large</a></li>
+                <li><a href="#" id="filter-small">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Temple Collection</h2>
+        <div id="temple-cards" class="temples"></div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> 🌸 Scott Townsend 🌸 California, USA</p>
+        <p>Last modified: <span id="last-modified"></span></p>
+    </footer>
+</body>
+</html>
