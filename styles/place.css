@@ -18,10 +18,27 @@ header {
     padding: 1rem;
 }
 
-.hero picture img {
+.hero {
+    position: relative;
+    text-align: center;
+}
+
+.hero img {
     width: 100%;
     height: auto;
     display: block;
+}
+
+.hero .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: left;
 }
 
 main {
@@ -38,7 +55,7 @@ main {
     flex-wrap: wrap; /* Ensure wrapping on smaller screens */
 }
 
-.data, .weather {
+.data {
     background-color: #f0f0f0;
     border-radius: 10px;
     padding: 1rem;
@@ -46,25 +63,11 @@ main {
     flex: 1;
 }
 
-.data h2, .weather h2 {
+.data h2 {
     background-color: var(--secondary-color);
     color: white;
     padding: 0.5rem;
     border-radius: 5px;
-}
-
-h2::after {
-    content: " ☀️";
-    margin-left: 5px;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-ul li {
-    margin: 0.5rem 0;
 }
 
 footer {
@@ -74,13 +77,11 @@ footer {
     padding: 0.5rem;
 }
 
-/* Optimize SVG for small screens */
-footer svg {
-    margin-left: 10px;
-    vertical-align: middle;
-    width: 20px;
-    height: 20px;
-    fill: white;
+footer .responsive-logo {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 /* Responsive Design */

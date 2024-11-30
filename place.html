@@ -10,18 +10,35 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/place.css">
+    <meta property="og:title" content="Explore California">
+    <meta property="og:description" content="Discover California's weather, population, and fun facts.">
+    <meta property="og:image" content="images/california-hero.jpg">
+    <meta property="og:url" content="https://example.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <header>
+    <header role="banner">
         <h1>California</h1>
     </header>
-    <main>
+    <main role="main">
         <!-- Hero Section -->
         <section class="hero">
             <picture>
-                <source srcset="images/california-hero.webp" type="image/webp">
+                <source srcset="images/california-hero.webp" media="(min-width: 1200px)" type="image/webp">
+                <source srcset="images/california-hero.webp" media="(min-width: 768px)" type="image/webp">
+                <source srcset="images/california-hero.webp" media="(max-width: 767px)" type="image/webp">
                 <img src="images/california-hero-fallback.jpg" alt="Scenic view of California" loading="lazy">
             </picture>
+            <div class="overlay">
+                <h2>Current Weather</h2>
+                <ul>
+                    <li>Temperature: <span id="Temperature">--</span> °C</li>
+                    <li>Conditions: <span id="Conditions">--</span></li>
+                    <li>Wind: <span id="WindSpeed">--</span> km/h</li>
+                    <li>Wind Chill: <span id="WindChill">--</span> °C</li>
+                </ul>
+            </div>
         </section>
 
         <!-- Weather Information Section -->
@@ -39,22 +56,12 @@
                     <li>Internet TLD: .us</li>
                 </ul>
             </div>
-            <div class="weather">
-                <h2>Weather</h2>
-                <ul>
-                    <li>Temperature: <span id="Temperature">--</span> °C</li>
-                    <li>Conditions: <span id="Conditions">--</span></li>
-                    <li>Wind: <span id="WindSpeed">--</span> km/h</li>
-                    <li>Wind Chill: <span id="WindChill">--</span> °C</li>
-                </ul>
-            </div>
         </section>
     </main>
-    <footer>
+    <footer role="contentinfo">
         <p>&copy; 2024 🌸 Scott Townsend 🌸 California</p>
         <p>Last Modified: <span id="lastModified"></span></p>
-        <img src="images/svg.png" alt="California Footer Logo" width="24" height="24">
-
+        <img src="images/svg-logo.svg" alt="California Footer Logo" class="responsive-logo">
     </footer>    
     <script src="scripts/place.js" defer></script>
 </body>
