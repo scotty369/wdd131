@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fitness Tracker - Log workouts, track progress, and stay motivated.">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Fitness Tracker</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav">
+                <li><a href="fitness.html">Home</a></li>
+                <li><a href="track.html">Track</a></li>
+                <li><a href="tips.html">Tips</a></li>
+                <li><a href="exercises.html">Exercises</a></li>
+                <li><a href="nutrition.html">Nutrition</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h1>Welcome to Your Fitness Tracker</h1>
+            <p>Log your workouts, track progress, and stay motivated!</p>
+        </section>
+        <section class="features">
+            <h2>Log Your Workout</h2>
+            <form id="logWorkoutForm" class="workout-form">
+                <input type="date" name="date" required placeholder="Workout Date">
+                <input type="text" name="type" required placeholder="Workout Type (e.g., Running)">
+                <input type="number" name="duration" required placeholder="Duration (minutes)">
+                <textarea name="description" rows="3" required placeholder="Workout Description (e.g., ran 5 miles, did 20 push-ups)"></textarea>
+                <button type="submit">Add Workout</button>
+            </form>
+        </section>
+        <section>
+            <h2>Logged Workouts</h2>
+            <ul id="workoutList" class="workout-list"></ul>
+        </section>
+        <section>
+            <h2>Your Progress</h2>
+            <canvas id="progressChart"></canvas>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Fitness Tracker. All rights reserved.</p>
+    </footer>
+    <script src="scripts/scripts.js"></script>
+</body>
+</html>

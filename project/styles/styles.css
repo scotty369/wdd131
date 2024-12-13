@@ -1,0 +1,115 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #0074D9;
+    padding: 1rem 0;
+}
+
+header .nav {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+header .nav li {
+    display: inline-block;
+    margin: 0 1rem;
+}
+
+header .nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f4f4f4;
+}
+
+.features {
+    padding: 1.5rem;
+    background: #fff;
+}
+
+.workout-form {
+    display: grid;
+    gap: 1rem;
+    margin: 0 auto;
+    max-width: 400px;
+}
+
+.workout-form input, .workout-form textarea, .workout-form button {
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+.workout-form textarea {
+    resize: vertical;
+}
+
+.workout-form input:focus, .workout-form textarea:focus {
+    outline: none;
+    border-color: #0074D9;
+    box-shadow: 0 0 5px rgba(0, 116, 217, 0.5);
+}
+
+.workout-form button {
+    background-color: #0074D9;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.workout-form button:hover {
+    background-color: #005bb5;
+}
+
+.workout-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.workout-list li {
+    border-bottom: 1px solid #ddd;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.workout-list li div {
+    max-width: 70%;
+}
+
+.workout-list li button {
+    background: #ff4136;
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.workout-list li button:hover {
+    background: #e60000;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #f4f4f4;
+    color: #333;
+}
